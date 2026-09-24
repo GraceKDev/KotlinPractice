@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.kt": "kotlin",
+        "*.kts": "kotlin"
+    },
+    "kotlin.languageServer.enabled": false
+}

@@ -1,28 +1,21 @@
 fun main(args: Array<String>) {
-    var number = 1
-    val lastNumber = 20
-    var evenNumberCounter = 0
-    var oddNumberCounter = 0
-    while (number <= lastNumber) {
-        number++
-
-        if ((number % 2) != 0) {
-            continue
-        }
-        evenNumberCounter++
-        println(number)
+    for(direction in Direction.values()) {
+        println(direction.direction + " " + direction.distance)
     }
-    println("Total number of even numbers found = $evenNumberCounter")
-    for (i in 1..20) {
-        if ((i % 2) == 0) {
-            continue
-        } else {
-            oddNumberCounter++
-
+    
+    val direction :Direction = Direction.valueOf("EAST")
+    when(direction) {
+        Direction.EAST -> println("direction is East")
+        Direction.NORTH -> { println("direction is North")}
+        Direction.SOUTH -> { println("direction is South")}
+        Direction.WEST -> { println("direction is West")}
         }
 
-    }
-    println("Total number of even $evenNumberCounter")
-    println("Total number of odd $oddNumberCounter")
+}
 
+enum class Direction(var direction:String,var distance:Int) {
+    NORTH(direction="north", distance =10),
+    SOUTH(direction="south", distance =10),
+    EAST(direction="east", distance =10), 
+    WEST(direction="west", distance =10)
 }

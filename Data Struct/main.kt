@@ -56,3 +56,9 @@ class User(var firstName:String ,var lastName:String,var age:Int) {
         return "User{firstName = $firstName, lastName = $lastName , age = $age}"
     }
 }
+
+
+// is the same as the above
+data class User2(var firstName:String ,var lastName:String,var age:Int) {
+    
+}
